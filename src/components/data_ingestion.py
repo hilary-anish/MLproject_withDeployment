@@ -1,12 +1,13 @@
 import os
 import sys
+
 from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
-
+from src.components import data_transformation
 
 @dataclass
 class DataIngestionConfig:
@@ -37,11 +38,19 @@ class DataIngestion:
             test_set.to_csv(self.ingestion_congif.test_data_path, index=False, header=True)
             logging.info("Ingestion of the data is completed")
 
-            return self.ingestion_congif.train_data_path, self.ingestion_congif.test_data_path
+            return (self.ingestion_congif.train_data_path, self.ingestion_congif.test_data_path)
 
         except Exception as e:
             raise CustomException(e, sys)
         
 
 
-        
+if __name__ == '__main__':
+    obj = DataIngestion()
+    train_data_path, test_data_path = obj.initiate_data_ingestion()
+
+
+    data_transform_obj = data_transformation.DataTransformation()
+    data_transform_obj.initiate_data_transformation(train_data_path, test_data_path)
+
+
