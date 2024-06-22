@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Charge Predictor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 18px;
+            color: #6c757d;
+        }
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .section-content {
+            margin-bottom: 40px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #343a40;
+            color: white;
+        }
+        .predict-button {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to the Insurance Charge Predictor</h1>
+            <p>Your trusted partner in estimating insurance costs and understanding the importance of coverage for all age groups.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Why Insurance is Important</h2>
+            <p>Insurance provides a safety net for unexpected events in life. It ensures financial stability and peace of mind by covering medical expenses, loss of income, and other unforeseen costs. Here, we explore the importance of having insurance for teens, adults, and the elderly.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Insurance for Teens</h2>
+            <div class="section-content">
+                <p>While teens may seem invincible, having insurance is crucial. Health insurance can cover unexpected medical expenses due to accidents or illnesses. Additionally, life insurance can provide financial support to families in the unfortunate event of a teen's death. Teaching teens about the importance of insurance early on helps instill responsible financial habits.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Insurance for Adults</h2>
+            <div class="section-content">
+                <p>For adults, insurance is a fundamental part of financial planning. Health insurance is essential for covering medical costs and maintaining access to healthcare. Life insurance ensures that dependents are financially secure in case of the policyholder's death. Moreover, auto and home insurance protect against significant financial losses from accidents and natural disasters. Having comprehensive insurance coverage helps adults safeguard their assets and provide for their families.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Insurance for the Elderly</h2>
+            <div class="section-content">
+                <p>As people age, their need for insurance becomes more pronounced. Health insurance is critical for covering the increased medical costs that come with aging. Long-term care insurance can help manage the expenses of nursing homes or in-home care, which are not typically covered by regular health insurance. Life insurance can also help cover end-of-life expenses and provide financial support to surviving family members. Ensuring adequate insurance coverage in later life is essential for maintaining financial stability and peace of mind.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="predict-button">
+        <a href="{{ url_for('predict_charges') }}" class="btn btn-primary btn-lg">Predict Your Insurance Amount</a>
+    </div>
+</div>
+
+    <div class="footer">
+        <p>&copy; 2024 Insurance Charge Predictor. All rights reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
