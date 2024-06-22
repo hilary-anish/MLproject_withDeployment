@@ -39,7 +39,7 @@ class DataTransformation:
             )
 
             cat_pipeline = Pipeline(
-                steps=[('oh_encode',OneHotEncoder())]
+                steps=[('oh_encode',OneHotEncoder()), ('scaling',StandardScaler(with_mean=False))]
             )
             
             # column transformation object created
